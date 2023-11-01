@@ -14,7 +14,7 @@ class InkPrimaryButton extends StatelessWidget {
     this.mainAxisAlignment = MainAxisAlignment.center,
     this.padding = EdgeInsets.zero,
     this.borderRadius = 10,
-    this.borderColor,
+    this.borderColor = Palette.black,
   });
   final String text;
   final VoidCallback? onPressed;
