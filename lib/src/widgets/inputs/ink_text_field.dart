@@ -21,7 +21,7 @@ class InkTextField extends StatefulWidget {
     this.optionalText,
     this.validator,
     this.autovalidateMode,
-    this.borderSide,
+    this.borderSide = const BorderSide(color: Palette.white),
     this.textAlign = TextAlign.start,
     this.fillColor = Palette.darkGrey,
     this.verticalPadding = 12,
@@ -275,7 +275,7 @@ class _InkTextFieldState extends State<InkTextField> {
               focusedBorder: _inputBorder(
                 color: widget.hasError
                     ? Palette.redErrorAndAlert
-                    : context.theme.primaryColor,
+                    : widget.borderSide?.color,
               ),
               suffixIcon: suffixIcon,
             ),

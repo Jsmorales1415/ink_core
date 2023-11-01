@@ -14,7 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ink Core',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Palette.red),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Palette.red,
+          brightness: Brightness.dark,
+        ),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Ink Core Package'),
@@ -42,7 +45,11 @@ class _MyHomePageState extends State<MyHomePage> {
       body: const Center(
         child: SingleChildScrollView(
           child: Column(
-            children: <Widget>[ButtonsSection(), gap10, TextFieldsSection()],
+            children: <Widget>[
+              ButtonsSection(),
+              gap10,
+              TextFieldsSection(),
+            ],
           ),
         ),
       ),
